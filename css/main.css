@@ -28,6 +28,10 @@ body,html {
   color:rgba(37, 43, 49, 1);
   background-color:#fff5f3;
 }
+b, strong {
+  font-family: "AccordRegular","Helvetica Neue",Helvetica,Arial,sans-serif;
+  text-decoration: underline;
+}
 .jumbotron {
   position:relative;
   background: #fff5f3 no-repeat center center url('../img/ceramic2.gif');
