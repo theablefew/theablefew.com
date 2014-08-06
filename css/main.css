@@ -32,9 +32,18 @@ b, strong {
   font-family: "AccordRegular","Helvetica Neue",Helvetica,Arial,sans-serif;
   text-decoration: underline;
 }
+a {
+  color:rgba(37, 43, 49, 1);
+  text-decoration:none;
+  transition-duration:0.35s;
+}
+a:hover {
+  color:rgba(255, 143, 119, 1.0);
+  text-decoration:underline;
+}
 .jumbotron {
   position:relative;
-  background: #fff5f3 no-repeat center center url('../img/ceramic2.gif');
+  background: #fff5f3 no-repeat center center url('../img/ceramic2.gif') fixed;
   background-size:cover;
   height:100%;
 }
