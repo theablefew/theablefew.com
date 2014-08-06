@@ -79,7 +79,7 @@ div img {
   width:100%;
   height:auto;
 }
-#about, #open_source {
+#about, #open_source, #contact {
   margin-top:250px;
   margin-bottom:250px;
 }
@@ -125,8 +125,11 @@ div img {
 .more {
   font-size:13px;
 }
+#contact h3 {
+  margin-top:0;
+}
 @media (max-width: 767px) {
-  #about, #open_source {
+  #about, #open_source, #contact {
     margin-top:125px;
     margin-bottom:125px;
   }
@@ -137,15 +140,3 @@ div img {
     padding:0 5px;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
