@@ -79,7 +79,7 @@ div img {
   -ms-filter: grayscale(100%);
   -o-filter: grayscale(100%);
   filter: grayscale(100%);
-  transition: all 2s;
+  transition-duration:2s;
   position:relative;
 }
 .member {
@@ -95,7 +95,7 @@ div img {
   left: 0;
   background-color: rgba(255, 143, 119, 1.0);
   opacity: 0.35;
-  transition:all 2s;
+  transition-duration:2s;
 }
 .member:hover img {
   -webkit-filter: grayscale(0%);
