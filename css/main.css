@@ -43,7 +43,7 @@ a:hover {
 }
 .jumbotron {
   position:relative;
-  background: #fff5f3 no-repeat center center url('../img/ceramic2.gif') fixed;
+  background: #fff5f3 no-repeat center bottom url('../img/ceramic2.gif');
   background-size:cover;
   height:100%;
 }
@@ -137,6 +137,5 @@ div img {
     font-size:26px;
     line-height:1.1;
     margin-bottom:60px;
-    padding:0 5px;
   }
 }
