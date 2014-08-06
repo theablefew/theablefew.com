@@ -70,7 +70,7 @@ div img {
   width:100%;
   height:auto;
 }
-#team, #about {
+#about {
   padding:250px 0;
 }
 .member img {
@@ -115,7 +115,20 @@ div img {
 .more {
   font-size:13px;
 }
-
+@media (max-width: 767px) {
+  .team h4 {
+    text-align:center;
+  }
+  #about {
+    padding:125px 0;
+  }
+  #about p {
+    font-size:26px;
+    line-height:1.1;
+    margin-bottom:60px;
+    padding:0 5px;
+  }
+}
 
 
 
