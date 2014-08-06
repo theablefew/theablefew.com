@@ -79,8 +79,9 @@ div img {
   width:100%;
   height:auto;
 }
-#about {
-  padding:250px 0;
+#about, #open_source {
+  margin-top:250px;
+  margin-bottom:250px;
 }
 .member img {
   -webkit-filter: grayscale(100%);
@@ -116,7 +117,7 @@ div img {
 .member:hover:after {
   opacity:0;
 }
-#about p {
+.lead-in {
   font-size:34px;
   line-height:1.1;
   margin-bottom:60px;
@@ -125,13 +126,11 @@ div img {
   font-size:13px;
 }
 @media (max-width: 767px) {
-  .team h4 {
-    text-align:center;
+  #about, #open_source {
+    margin-top:125px;
+    margin-bottom:125px;
   }
-  #about {
-    padding:125px 0;
-  }
-  #about p {
+  .lead-in {
     font-size:26px;
     line-height:1.1;
     margin-bottom:60px;
