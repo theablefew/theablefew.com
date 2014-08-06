@@ -1,12 +1,116 @@
 
 
 /* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
-
-
-
-
+Author's custom styles
+========================================================================== */
+@font-face {
+  font-family: 'AccordRegular';
+  src: url(http://theablefew.com/assets/AccordReg-webfont-9f89d1b31848f42752d810117a861b66.eot);
+  src: url(http://theablefew.com/assets/AccordReg-webfont.eot?#iefix) format("embedded-opentype"), url(http://theablefew.com/assets/AccordReg-webfont-2715c22f5510e722d81819a01b33fecf.woff) format("woff"), url(http://theablefew.com/assets/AccordReg-webfont-e76d08c6735d73af7b43e9c9ffcb75b5.ttf) format("truetype"), url(http://theablefew.com/assets/AccordReg-webfont.svg#AccordReg) format("svg");
+  font-weight: normal;
+  font-style: normal
+}
+@font-face {
+  font-family: 'AccordLight';
+  src: url(http://theablefew.com/assets/AccordLight-webfont-34385c9227051eedc190e196f4b01c16.eot);
+  src: url(http://theablefew.com/assets/AccordLight-webfont.eot?#iefix) format("embedded-opentype"), url(http://theablefew.com/assets/AccordLight-webfont-eb9caa71bac329ef4a48f22d9bc1988c.woff) format("woff"), url(http://theablefew.com/assets/AccordLight-webfont-4d36fabfa8ae824ba3eb395aff847e93.ttf) format("truetype"), url(http://theablefew.com/assets/AccordLight-webfont.svg#AccordLight) format("svg");
+  font-weight: normal;
+  font-style: normal
+}
+body,html {
+  height:100%;
+  width:100%;
+  margin:0;
+  font: 15px/25px "AccordLight","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight:normal;
+  text-rendering:optimizeLegibility;
+  transform: translate3d(0,0,0);
+  color:rgba(37, 43, 49, 1);
+  background-color:#fff5f3;
+}
+.jumbotron {
+  position:relative;
+  background: #fff5f3 no-repeat center center url('../img/ceramic2.gif');
+  background-size:cover;
+  height:100%;
+}
+.jumbotron .container {
+  position: relative;
+  z-index: 2;
+  bottom:0;
+  left:0;
+  height:100%;
+}
+.jumbo-content {
+  position:absolute;
+  width:100%;
+  bottom:0;
+  left:0;
+}
+#logo {
+  width:100%;
+  display:block;
+  color:rgba(255, 143, 119, 1.0);
+  font-size:100px;
+  font: 100px/100px "AccordLight","Helvetica Neue",Helvetica,Arial,sans-serif;
+  margin:0;
+}
+.jumbotron p {
+  font-size: 40px;
+  font-weight: normal;
+  line-height: 1.25;
+  margin:0 0 20px;
+  color:#fff5f3;
+}
+div img {
+  width:100%;
+  height:auto;
+}
+#team, #about {
+  padding:250px 0;
+}
+.member img {
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  filter: grayscale(100%);
+  transition: all 2s;
+  position:relative;
+}
+.member {
+  position:relative;
+}
+.member:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(255, 143, 119, 1.0);
+  opacity: 0.35;
+  transition:all 2s;
+}
+.member:hover img {
+  -webkit-filter: grayscale(0%);
+  -moz-filter: grayscale(0%);
+  -ms-filter: grayscale(0%);
+  -o-filter: grayscale(0%);
+  filter: grayscale(0%);
+}
+.member:hover:after {
+  opacity:0;
+}
+#about p {
+  font-size:34px;
+  line-height:1.1;
+  margin-bottom:60px;
+}
+.more {
+  font-size:13px;
+}
 
 
 
