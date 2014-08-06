@@ -56,13 +56,13 @@ b, strong {
   display:block;
   color:rgba(255, 143, 119, 1.0);
   font-size:100px;
-  font: 100px/100px "AccordLight","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font: 100px "AccordLight","Helvetica Neue",Helvetica,Arial,sans-serif;
+  line-height:1;
   margin:0;
 }
-.jumbotron p {
+#tag {
   font-size: 40px;
   font-weight: normal;
-  line-height: 1.25;
   margin:0 0 20px;
   color:#fff5f3;
 }
