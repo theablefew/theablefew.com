@@ -44,6 +44,7 @@ a {
 }
 a:hover {
   color:rgba(255, 143, 119, 1.0);
+  text-decoration:none;
 }
 .jumbotron {
   position:relative;
