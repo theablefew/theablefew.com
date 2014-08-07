@@ -63,9 +63,10 @@ a:hover {
   width:100%;
   bottom:0;
   left:-15px;
+  right:-15px;
 }
 #logo {
-  width:100%;
+  width:109%;
   display:block;
   color:rgba(255, 143, 119, 1.0);
   font-size:100px;
