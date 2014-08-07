@@ -151,13 +151,8 @@ div img {
 .form-control:focus {
   border-color: rgba(255, 143, 119, 1.0);
   outline: 0;
-  -webkit-box-shadow: none; /* Android 2.3+, iOS 4.0.2-4.2, Safari 3-4 */
-  box-shadow: none;
-}
-.btn:focus,
-.btn:active:focus,
-.btn.active:focus {
-  outline: none;
+  -webkit-box-shadow: none !important; /* Android 2.3+, iOS 4.0.2-4.2, Safari 3-4 */
+  box-shadow: none !important;
 }
 .btn {
   font-size:15px;
