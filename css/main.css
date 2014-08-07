@@ -62,11 +62,9 @@ a:hover {
   position:absolute;
   width:100%;
   bottom:0;
-  left:-15px;
-  right:-15px;
 }
 #logo {
-  width:109%;
+  width:100%;
   display:block;
   color:rgba(255, 143, 119, 1.0);
   font-size:100px;
@@ -75,7 +73,7 @@ a:hover {
   margin:0;
 }
 #tag {
-  width:109%;
+  width:100%;
   font-size: 40px;
   font-weight: normal;
   margin:0 0 125px;
@@ -169,9 +167,15 @@ hr {
   border-color: #eceef1;
 }
 @media (max-width: 767px) {
+  #logo, #tag {
+    width:109%;
+  }
   .lead-in {
     font-size:26px;
     line-height:1.1;
     margin-bottom:60px;
+  }
+  .jumbo-content {
+    left:-15px;
   }
 }
