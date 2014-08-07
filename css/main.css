@@ -40,6 +40,9 @@ b, strong {
   text-decoration: none;
   border-bottom: 1px solid rgba(255, 143, 119, 1.0);
 }
+small {
+  color: #bcc4cc;
+}
 a {
   color:rgba(37, 43, 49, 1);
   text-decoration:none;
@@ -81,8 +84,13 @@ a:hover {
   width:100%;
   font-size: 40px;
   font-weight: normal;
+  margin:0 0 30px;;
+  color:#f6f7f8;
+}
+.jumbotron p {
   margin:0 0 125px;
   color:#f6f7f8;
+  font-size:12px;
 }
 div img {
   width:100%;
