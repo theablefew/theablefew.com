@@ -147,12 +147,14 @@ div img {
   box-shadow: none;
   border-color: #bcc4cc;
   color: rgba(37, 43, 49, 1);
+  -webkit-appearance: none;
 }
 .form-control:focus {
   border-color: rgba(255, 143, 119, 1.0);
   outline: 0;
   -webkit-box-shadow: none !important; /* Android 2.3+, iOS 4.0.2-4.2, Safari 3-4 */
   box-shadow: none !important;
+  -webkit-appearance: none;
 }
 .btn {
   font-size:15px;
