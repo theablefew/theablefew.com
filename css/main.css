@@ -21,7 +21,7 @@ body,html {
   height:100%;
   width:100%;
   margin:0;
-  font: 15px/25px "AccordLight","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font: 14px/25px "AccordLight","Helvetica Neue",Helvetica,Arial,sans-serif;
   font-weight:normal;
   text-rendering:optimizeLegibility;
   transform: translate3d(0,0,0);
@@ -30,7 +30,7 @@ body,html {
 }
 label {
   font-weight: normal;
-  font-size:15px;
+  font-size:14px;
 }
 b, strong {
   font-family: "AccordRegular","Helvetica Neue",Helvetica,Arial,sans-serif;
