@@ -154,6 +154,14 @@ div img {
   -webkit-box-shadow: none; /* Android 2.3+, iOS 4.0.2-4.2, Safari 3-4 */
   box-shadow: none;
 }
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus {
+  outline: none;
+}
+.btn {
+  font-size:15px;
+}
 .btn-default {
   color: rgba(37, 43, 49, 1);
   border-color: #bcc4cc;
