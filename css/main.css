@@ -136,11 +136,11 @@ div img {
 #contact h3 {
   margin:0;
 }
-#contact p {
+.able_phone {
   margin-bottom:20px;
 }
-#contact p.able_email {
-  margin-bottom: 40px;
+.able_email {
+  margin-bottom: 60px;
 }
 .form-control {
   -webkit-box-shadow: none; /* Android 2.3+, iOS 4.0.2-4.2, Safari 3-4 */
