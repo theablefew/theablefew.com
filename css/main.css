@@ -26,7 +26,10 @@ body,html {
   text-rendering:optimizeLegibility;
   transform: translate3d(0,0,0);
   color:rgba(37, 43, 49, 1);
-  background-color:#fff5f3;
+  background-color:rgba(37, 43, 49, 1);
+}
+.wrapper {
+  background-color:#f6f7f8;
 }
 label {
   font-weight: normal;
@@ -48,9 +51,10 @@ a:hover {
 }
 .jumbotron {
   position:relative;
-  background: #fff5f3 no-repeat center bottom url('../img/ceramic2.gif');
+  background: rgba(37, 43, 49, 1) no-repeat center bottom url('../img/ceramic2.gif');
   background-size:cover;
   height:100%;
+  margin:0;
 }
 .jumbotron .container {
   position: relative;
@@ -78,13 +82,17 @@ a:hover {
   font-size: 40px;
   font-weight: normal;
   margin:0 0 125px;
-  color:#fff5f3;
+  color:#f6f7f8;
 }
 div img {
   width:100%;
   height:auto;
 }
-#about, #open_source, #contact {
+#about {
+  padding-top:125px;
+  margin-bottom:125px;
+}
+#open_source, #contact {
   margin-top:125px;
   margin-bottom:125px;
 }
