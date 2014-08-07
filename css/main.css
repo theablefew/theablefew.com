@@ -28,9 +28,14 @@ body,html {
   color:rgba(37, 43, 49, 1);
   background-color:#fff5f3;
 }
+label {
+  font-weight: normal;
+  font-size:15px;
+}
 b, strong {
   font-family: "AccordRegular","Helvetica Neue",Helvetica,Arial,sans-serif;
-  text-decoration: underline;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 143, 119, 1.0);
 }
 a {
   color:rgba(37, 43, 49, 1);
@@ -58,7 +63,7 @@ a:hover {
   position:absolute;
   width:100%;
   bottom:0;
-  left:0;
+  left:-15px;
 }
 #logo {
   width:100%;
@@ -80,8 +85,8 @@ div img {
   height:auto;
 }
 #about, #open_source, #contact {
-  margin-top:250px;
-  margin-bottom:250px;
+  margin-top:125px;
+  margin-bottom:125px;
 }
 .member img {
   -webkit-filter: grayscale(100%);
@@ -122,17 +127,47 @@ div img {
   line-height:1.1;
   margin-bottom:60px;
 }
-.more {
-  font-size:13px;
-}
-#contact h3 {
+#open_source h2 {
   margin-top:0;
 }
+.more {
+  font-size: 13px;
+  color: rgba(255, 143, 119, 1.0);
+}
+#contact h3 {
+  margin:0;
+}
+#contact p {
+  margin-bottom:20px;
+}
+#contact p.able_email {
+  margin-bottom: 40px;
+}
+.form-control {
+  -webkit-box-shadow: none; /* Android 2.3+, iOS 4.0.2-4.2, Safari 3-4 */
+  box-shadow: none;
+  border-color: #bcc4cc;
+  color: rgba(37, 43, 49, 1);
+}
+.form-control:focus {
+  border-color: rgba(255, 143, 119, 1.0);
+  outline: 0;
+  -webkit-box-shadow: none; /* Android 2.3+, iOS 4.0.2-4.2, Safari 3-4 */
+  box-shadow: none;
+}
+.btn-default {
+  color: rgba(37, 43, 49, 1);
+  border-color: #bcc4cc;
+}
+.btn-default:hover, .btn-default:focus, .btn-default:active {
+  color: rgba(37, 43, 49, 1);
+  background-color: #fff5f3;
+  border-color: rgba(255, 143, 119, 1.0);
+}
+hr {
+  border-color: #eceef1;
+}
 @media (max-width: 767px) {
-  #about, #open_source, #contact {
-    margin-top:125px;
-    margin-bottom:125px;
-  }
   .lead-in {
     font-size:26px;
     line-height:1.1;
