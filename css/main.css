@@ -92,6 +92,9 @@ a:hover {
   color:#f6f7f8;
   font-size:12px;
 }
+.jumbotron a {
+  color:#f6f7f8;
+}
 div img {
   width:100%;
   height:auto;
