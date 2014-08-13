@@ -1,14 +1,14 @@
 @font-face {
-  font-family: 'AccordRegular';
-  src: url(../fonts/AccordReg-webfont.eot);
-  src: url(../fonts/AccordReg-webfont.eot?#iefix) format("embedded-opentype"), url(../fonts/AccordReg-webfont.woff) format("woff"), url(../fonts/AccordReg-webfont.ttf) format("truetype"), url(../fonts/AccordReg-webfont.svg#AccordReg) format("svg");
+  font-family: 'AccordLight';
+  src: url(../fonts/AccordLight-webfont.eot);
+  src: url(../fonts/AccordLight-webfont.eot?#iefix) format("embedded-opentype"), url(../fonts/AccordLight-webfont.woff) format("woff"), url(../fonts/AccordLight-webfont.ttf) format("truetype"), url(../fonts/AccordLight-webfont.svg#AccordLight) format("svg");
   font-weight: normal;
   font-style: normal
 }
 @font-face {
-  font-family: 'AccordLight';
-  src: url(../fonts/AccordLight-webfont.eot);
-  src: url(../fonts/AccordLight-webfont.eot?#iefix) format("embedded-opentype"), url(../fonts/AccordLight-webfont.woff) format("woff"), url(../fonts/AccordLight-webfont.ttf) format("truetype"), url(../fonts/AccordLight-webfont.svg#AccordLight) format("svg");
+  font-family: 'AccordBold';
+  src: url(../fonts/AccordBold-webfont.eot);
+  src: url(../fonts/AccordBold-webfont.eot?#iefix) format("embedded-opentype"), url(../fonts/AccordBold-webfont.woff) format("woff"), url(../fonts/AccordBold-webfont.ttf) format("truetype"), url(../fonts/AccordBold-webfont.svg#AccordBold) format("svg");
   font-weight: normal;
   font-style: normal
 }
@@ -31,9 +31,14 @@ label {
   font-size:15px;
 }
 b, strong {
-  font-family: "AccordRegular","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: "AccordBold","Helvetica Neue",Helvetica,Arial,sans-serif;
   text-decoration: none;
   border-bottom: 1px solid rgba(255, 143, 119, 1.0);
+  transition-duration:0.3s;
+  font-weight:normal;
+}
+b:hover, strong:hover {
+  border-bottom: 3px solid rgba(255, 143, 119, 1.0);
 }
 small {
   color: #bcc4cc;
@@ -102,17 +107,12 @@ div img {
   margin-top:125px;
   margin-bottom:125px;
 }
-.member img {
-  -webkit-filter: grayscale(100%);
-  -moz-filter: grayscale(100%);
-  -ms-filter: grayscale(100%);
-  -o-filter: grayscale(100%);
-  filter: grayscale(100%);
-  transition-duration:1s;
+.member, .member img {
   position:relative;
 }
-.member {
-  position:relative;
+.member + h4 {
+  transition-duration:1s;
+  border-bottom: 1px solid rgba(255, 143, 119, 0);
 }
 .member:after {
   content: '';
@@ -126,15 +126,22 @@ div img {
   opacity: 0.35;
   transition-duration:1s;
 }
-.member:hover img {
-  -webkit-filter: grayscale(0%);
-  -moz-filter: grayscale(0%);
-  -ms-filter: grayscale(0%);
-  -o-filter: grayscale(0%);
-  filter: grayscale(0%);
-}
 .member:hover:after {
   opacity:0;
+}
+.member:hover + h4 {
+  border-bottom: 1px solid rgba(255, 143, 119, 1.0);
+}
+.member:hover + h4 .residence {
+  color:rgba(37, 43, 49, 1);
+}
+.member + h4 .residence {
+  float:right;
+  color:rgba(37, 43, 49, 0);
+  transition-duration:1s;
+}
+.member + h4 .residence i {
+  font-size:50%;
 }
 .lead-in {
   font-size:34px;
