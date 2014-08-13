@@ -1,19 +1,14 @@
-
-
-/* ==========================================================================
-Author's custom styles
-========================================================================== */
 @font-face {
   font-family: 'AccordRegular';
-  src: url(http://theablefew.com/assets/AccordReg-webfont-9f89d1b31848f42752d810117a861b66.eot);
-  src: url(http://theablefew.com/assets/AccordReg-webfont.eot?#iefix) format("embedded-opentype"), url(http://theablefew.com/assets/AccordReg-webfont-2715c22f5510e722d81819a01b33fecf.woff) format("woff"), url(http://theablefew.com/assets/AccordReg-webfont-e76d08c6735d73af7b43e9c9ffcb75b5.ttf) format("truetype"), url(http://theablefew.com/assets/AccordReg-webfont.svg#AccordReg) format("svg");
+  src: url(../fonts/AccordReg-webfont.eot);
+  src: url(../fonts/AccordReg-webfont.eot?#iefix) format("embedded-opentype"), url(../fonts/AccordReg-webfont.woff) format("woff"), url(../fonts/AccordReg-webfont.ttf) format("truetype"), url(../fonts/AccordReg-webfont.svg#AccordReg) format("svg");
   font-weight: normal;
   font-style: normal
 }
 @font-face {
   font-family: 'AccordLight';
-  src: url(http://theablefew.com/assets/AccordLight-webfont-34385c9227051eedc190e196f4b01c16.eot);
-  src: url(http://theablefew.com/assets/AccordLight-webfont.eot?#iefix) format("embedded-opentype"), url(http://theablefew.com/assets/AccordLight-webfont-eb9caa71bac329ef4a48f22d9bc1988c.woff) format("woff"), url(http://theablefew.com/assets/AccordLight-webfont-4d36fabfa8ae824ba3eb395aff847e93.ttf) format("truetype"), url(http://theablefew.com/assets/AccordLight-webfont.svg#AccordLight) format("svg");
+  src: url(../fonts/AccordLight-webfont.eot);
+  src: url(../fonts/AccordLight-webfont.eot?#iefix) format("embedded-opentype"), url(../fonts/AccordLight-webfont.woff) format("woff"), url(../fonts/AccordLight-webfont.ttf) format("truetype"), url(../fonts/AccordLight-webfont.svg#AccordLight) format("svg");
   font-weight: normal;
   font-style: normal
 }
