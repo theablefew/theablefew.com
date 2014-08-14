@@ -54,7 +54,7 @@ a:hover {
 }
 .jumbotron {
   position:relative;
-  background: rgba(37, 43, 49, 1) no-repeat center bottom url('../img/ceramic2.gif');
+  background: rgba(29, 32, 42, 1.0) no-repeat center bottom url('../img/ceramic2.gif');
   background-size:cover;
   height:100%;
   margin:0;
