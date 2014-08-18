@@ -245,7 +245,12 @@
       //  var src = $(this).attr('data-gif-bg');
       //  return "url('"+ src + "')";
       //});
-      $('img[data-gif]').attr('src', function(i) { return $(this).attr('data-gif'); });
+      $('img[data-gif]').each(function(index){
+        var src = $(this).attr('data-gif');
+        $(this).load(src, function(index) {
+          $(this).attr('src', function(i) { return $(this).attr('data-gif'); });
+        });
+      });
     });
   </script>
 
