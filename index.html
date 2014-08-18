@@ -247,8 +247,14 @@
         var src = $(this).attr('data-gif-bg');
         return "url('"+ src + "')";
       });
-      $('img[data-gif]').attr("src", function(index) {
-        return $(this).attr('data-gif');
+      $('img[data-gif]').each(function(index) {
+        var src = $(this).attr('data-gif');
+        $(this).load(src, function(responseTxt,statusTxt,xhr) {
+          if(statusTxt=="success")
+            $(this).attr('src', src);
+          if(statusTxt=="error")
+            return false;;
+        });
       });
     });
   </script>
