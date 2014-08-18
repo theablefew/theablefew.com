@@ -243,19 +243,11 @@
     $("#tag").fitText(2.2, { minFontSize: '15px', maxFontSize: '40px' });
 
     $(window).load(function() {
-      $('div[data-gif-bg]').css("background-image", function(index) {
-        var src = $(this).attr('data-gif-bg');
-        return "url('"+ src + "')";
-      });
-      $('img[data-gif]').each(function(index) {
-        var src = $(this).attr('data-gif');
-        $(this).load(src, function(responseTxt,statusTxt,xhr) {
-          if(statusTxt=="success")
-            $(this).attr('src', src);
-          if(statusTxt=="error")
-            return false;;
-        });
-      });
+      //$('div[data-gif-bg]').css("background-image", function(index) {
+      //  var src = $(this).attr('data-gif-bg');
+      //  return "url('"+ src + "')";
+      //});
+      $('img[data-gif]').attr('src', function(i) { return $(this).attr('data-gif'); });
     });
   </script>
 
