@@ -32,7 +32,7 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
   <!-- Main jumbotron for a primary marketing message or call to action -->
-  <div class="jumbotron">
+  <div class="jumbotron" data-gif-bg="img/ceramic.gif">
     <div class="container">
       <div class="jumbo-content">
         <h1 id="logo">the able few</h1>
@@ -245,6 +245,10 @@
     $(window).load(function() {
       $('img[data-gif]').attr("src", function(index) {
         return $(this).attr('data-gif');
+      });
+      $('div[data-gif-bg]').css("background-image", function(index) {
+        var src = $(this).attr('data-gif-bg');
+        return "url('"+ src + "')";
       });
     });
   </script>
