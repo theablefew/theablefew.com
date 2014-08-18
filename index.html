@@ -243,12 +243,12 @@
     $("#tag").fitText(2.2, { minFontSize: '15px', maxFontSize: '40px' });
 
     $(window).load(function() {
-      $('img[data-gif]').attr("src", function(index) {
-        return $(this).attr('data-gif');
-      });
       $('div[data-gif-bg]').css("background-image", function(index) {
         var src = $(this).attr('data-gif-bg');
         return "url('"+ src + "')";
+      });
+      $('img[data-gif]').attr("src", function(index) {
+        return $(this).attr('data-gif');
       });
     });
   </script>
