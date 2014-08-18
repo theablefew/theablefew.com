@@ -3,13 +3,12 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
-
-# THANKS
-
-    <name>
+    Spencer Markowski -- Partner
+    Iouri Kostine -- Partner
+    Michael Tomko -- Production Director -- @michaeltomko
+    Jason Luebke -- UX / JavaScript
 
 # TECHNOLOGY COLOPHON
 
     HTML5, CSS3
-    jQuery, Modernizr
+    jQuery, Font Awesome
