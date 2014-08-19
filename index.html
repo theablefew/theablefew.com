@@ -10,6 +10,7 @@
   <meta name="description" content="The Able Few provides technology consulting in Ruby on Rails, Storm, and Elasticsearch and is based in St. Louis, MO and Indianapolis, IN.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv='x-dns-prefetch-control' content='on'>
+  <link rel="dns-prefetch" href="//ajax.googleapis.com">
 
   <meta property="og:title" content="The Able Few | Elasticsearch and Ruby on Rails Consulting" />
   <meta property="og:site_name" content="The Able Few"/>
@@ -17,6 +18,12 @@
   <meta property="og:type" content="website" />
   <meta property="fb:app_id" content="330382707086328" />
   <meta property="og:image" content="http://theablefew.github.io/theablefew.com/img/able-mark-facebook-og-image.png" />
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@theablefew">
+  <meta name="twitter:creator" content="@theablefew">
+  <meta name="twitter:title" content="The Able Few | Elasticsearch and Ruby on Rails Consulting">
+  <meta name="twitter:description" content="The Able Few provides technology consulting in Ruby on Rails, Storm, and Elasticsearch and specializes in solving complex problems related to consuming, processing, and analyzing large sets of data.">
+  <meta name="twitter:image:src" content="http://theablefew.github.io/theablefew.com/img/able-mark-facebook-og-image.png">
   <link type="text/plain" rel="author" href="/humans.txt" />
 
   <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -218,7 +225,7 @@
               <label for="body">What's on your mind?</label>
               <textarea class="form-control" rows="3" name="body" id="body" placeholder="Do tell…"></textarea>
             </div>
-            <input type="hidden" name="_next" value="//trying.dev" />
+            <input type="hidden" name="_next" value="//theablefew.github.io/theablefew.com/?thanks=true" />
             <button type="submit" class="btn btn-default btn-block">Send</button>
           </form>
         </div>
@@ -237,16 +244,26 @@
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
 
   <script>
+    function getQueryVariable(variable)
+    {
+      var query = window.location.search.substring(1);
+      var vars = query.split("&");
+      for (var i=0;i<vars.length;i++) {
+        var pair = vars[i].split("=");
+        if(pair[0] == variable){return decodeURIComponent(pair[1]);}
+      }
+      return(false);
+    }
     /*global jQuery */
-  /*!
-   * FitText.js 1.2
-   *
-   * Copyright 2011, Dave Rupert http://daverupert.com
-   * Released under the WTFPL license
-   * http://sam.zoy.org/wtfpl/
-   *
-   * Date: Thu May 05 14:23:00 2011 -0600
-   */
+    /*!
+     * FitText.js 1.2
+     *
+     * Copyright 2011, Dave Rupert http://daverupert.com
+     * Released under the WTFPL license
+     * http://sam.zoy.org/wtfpl/
+     *
+     * Date: Thu May 05 14:23:00 2011 -0600
+     */
 
     (function( $ ){
 
@@ -280,10 +297,101 @@
       };
 
     })( jQuery );
+    /* ========================================================================
+     * Bootstrap: alert.js v3.1.1
+     * http://getbootstrap.com/javascript/#alerts
+     * ========================================================================
+     * Copyright 2011-2014 Twitter, Inc.
+     * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+     * ======================================================================== */
+
+
+    +function ($) {
+      'use strict';
+
+      // ALERT CLASS DEFINITION
+      // ======================
+
+      var dismiss = '[data-dismiss="alert"]'
+      var Alert   = function (el) {
+        $(el).on('click', dismiss, this.close)
+      }
+
+      Alert.prototype.close = function (e) {
+        var $this    = $(this)
+        var selector = $this.attr('data-target')
+
+        if (!selector) {
+          selector = $this.attr('href')
+          selector = selector && selector.replace(/.*(?=#[^\s]*$)/, '') // strip for ie7
+        }
+
+        var $parent = $(selector)
+
+        if (e) e.preventDefault()
+
+          if (!$parent.length) {
+            $parent = $this.hasClass('alert') ? $this : $this.parent()
+          }
+
+          $parent.trigger(e = $.Event('close.bs.alert'))
+
+          if (e.isDefaultPrevented()) return
+
+            $parent.removeClass('in')
+
+            function removeElement() {
+              $parent.trigger('closed.bs.alert').remove()
+            }
+
+            $.support.transition && $parent.hasClass('fade') ?
+              $parent
+            .one($.support.transition.end, removeElement)
+            .emulateTransitionEnd(150) :
+              removeElement()
+      }
+
+
+      // ALERT PLUGIN DEFINITION
+      // =======================
+
+      var old = $.fn.alert
+
+      $.fn.alert = function (option) {
+        return this.each(function () {
+          var $this = $(this)
+          var data  = $this.data('bs.alert')
+
+          if (!data) $this.data('bs.alert', (data = new Alert(this)))
+            if (typeof option == 'string') data[option].call($this)
+        })
+      }
+
+      $.fn.alert.Constructor = Alert
+
+
+      // ALERT NO CONFLICT
+      // =================
+
+      $.fn.alert.noConflict = function () {
+        $.fn.alert = old
+        return this
+      }
+
+
+      // ALERT DATA-API
+      // ==============
+
+      $(document).on('click.bs.alert.data-api', dismiss, Alert.prototype.close)
+
+    }(jQuery);
     $("#logo").fitText(1.2, { minFontSize: '55px', maxFontSize: '100px' });
     $("#tag").fitText(2.2, { minFontSize: '15px', maxFontSize: '40px' });
 
     $(window).load(function() {
+      var param = getQueryVariable("thanks");
+      if (param == "true") { $('.jumbotron .container').prepend("<div class='alert alert-thanks' role='alert'><button type='button' class='close' data-dismiss='alert'><span aria-hidden='true'>&times;</span><span class='sr-only'>Close</span></button>Thank you for contacting The Able Few. Someone will be back with you shortly!</div>"); }
+
       $('img[data-gif]').attr('src', function(index){
         return $(this).attr('data-gif');
       });
