@@ -2186,6 +2186,16 @@
     left:0;
     width:100%;
   }
+  #stretchy {
+    background: #ff393a url(../img/stretchy-background.png) no-repeat bottom center fixed;
+    padding: 20px;
+    margin-top:20px;
+    color: #ffffff;
+  }
+  .stretchy-logo {
+    width:100%;
+    height:auto;
+  }
   @media (max-width: 767px) {
     #logo, #tag {
       width:109%;
