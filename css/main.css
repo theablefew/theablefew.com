@@ -2187,14 +2187,21 @@
     width:100%;
   }
   #stretchy {
-    background: #ff393a url(../img/stretchy-background.png) no-repeat bottom center fixed;
+    /* background: #ff393a url(../img/stretchy-background.png) no-repeat bottom center fixed; */
     padding: 20px;
     margin-top:20px;
-    color: #ffffff;
+    /* color: #ffffff; */
   }
   .stretchy-logo {
     width:100%;
     height:auto;
+  }
+  #badges a {
+    display:block;
+    margin-right: 5px;
+    float:left;
+  }
+  #badges a img {
   }
   @media (max-width: 767px) {
     #logo, #tag {
@@ -2209,3 +2216,18 @@
       left:-15px;
     }
   }
+
+  h2 {
+    border-bottom: 1px solid #ededf2;
+    margin-top: 50px;
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+  }
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+  margin-bottom: 20px;
+}
+  

@@ -5,10 +5,22 @@
 
     Spencer Markowski -- Partner
     Iouri Kostine -- Partner
+
+# ALUMNI
+
     Michael Tomko -- Production Director -- @michaeltomko
-    Jason Luebke -- UX / JavaScript
+    Michael Bishop -- Co-Founder
+    Kyle Knight -- UX / JavaScript
+    Chris Oliver -- Ruby / Rails / Fullstack
+    Amos King -- Ruby / Rails / Fullstack
+    Dustin Fadler -- Javascript / Rails
+    Tom Muessig -- Rails
+    Josh Chernoff -- Rails
+    Matt Fitzpatrick -- Project Management
+    Corey Welch -- Front-end Developer
+    Jason Luebke -- UX / JavaScript 
 
 # TECHNOLOGY COLOPHON
 
-    HTML5, CSS3
-    jQuery, Font Awesome
+    HTML5, CSS3, Ruby, Elasticsearch,
+    Font Awesome
