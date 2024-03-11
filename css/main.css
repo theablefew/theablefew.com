@@ -2200,6 +2200,7 @@
     float:left;
   }
   #badges a img {
+    height: 20px;
   }
   @media (max-width: 767px) {
     #logo, #tag {
