@@ -2181,7 +2181,7 @@
     background-color: #f7f7f9;
     border-color: rgba(255, 143, 119, 1.0);
     color: rgba(30, 30, 41, 1);
-    position: absolute;
+    position: relative;
     top:0;
     left:0;
     width:100%;

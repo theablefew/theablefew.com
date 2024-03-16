@@ -166,7 +166,7 @@
       <div class="row">
         <div class="col-md-12" id="stretchy">
           <div class="row">
-            <div class="col-sm-4 col-sm-offset-1">
+            <div class="col-sm-3 col-sm-offset-2">
               <img src="img/stretchy.png" class="stretchy-logo">
             </div>
             <div class="col-sm-7">
@@ -276,19 +276,19 @@
       }).then(response => {
         // $('.alert').remove();
         if (response.ok) {
-          $('.jumbotron .container').prepend("<div class='alert alert-thanks' role='alert'><button type='button' class='close' data-dismiss='alert'><span aria-hidden='true'>&times;</span><span class='sr-only'>Close</span></button>Thank you for contacting The Able Few. Someone will be back with you shortly!</div>");
+          $('#contact-form').prepend("<div class='alert alert-thanks' role='alert'><button type='button' class='close' data-dismiss='alert'><span aria-hidden='true'>&times;</span><span class='sr-only'>Close</span></button>Thank you for contacting The Able Few. Someone will be back with you shortly!</div>");
           form.reset()
         } else {
           response.json().then(data => {
             if (Object.hasOwn(data, 'errors')) {
-              $('.jumbotron .container').prepend("<div class='alert alert-thanks' role='alert'><button type='button' class='close' data-dismiss='alert'><span aria-hidden='true'>&times;</span><span class='sr-only'>Close</span></button>" +  data["errors"].map(error => error["message"]).join(", ") + "</div>");
+              $('#contact-form').prepend("<div class='alert alert-thanks' role='alert'><button type='button' class='close' data-dismiss='alert'><span aria-hidden='true'>&times;</span><span class='sr-only'>Close</span></button>" +  data["errors"].map(error => error["message"]).join(", ") + "</div>");
             } else {
-              $('.jumbotron .container').prepend("<div class='alert alert-thanks' role='alert'><button type='button' class='close' data-dismiss='alert'><span aria-hidden='true'>&times;</span><span class='sr-only'>Close</span></button>There was a problem submitting your request. Give us a call or send us an email: info@theablefew.com</div>");
+              $('#contact-form').prepend("<div class='alert alert-thanks' role='alert'><button type='button' class='close' data-dismiss='alert'><span aria-hidden='true'>&times;</span><span class='sr-only'>Close</span></button>There was a problem submitting your request. Give us a call or send us an email: info@theablefew.com</div>");
             }
           })
         }
       }).catch(error => {
-        $('.jumbotron .container').prepend("<div class='alert alert-thanks' role='alert'><button type='button' class='close' data-dismiss='alert'><span aria-hidden='true'>&times;</span><span class='sr-only'>Close</span></button>There was a problem submitting your request. Give us a call or send us an email: info@theablefew.com</div>");
+        $('#contact-form').prepend("<div class='alert alert-thanks' role='alert'><button type='button' class='close' data-dismiss='alert'><span aria-hidden='true'>&times;</span><span class='sr-only'>Close</span></button>There was a problem submitting your request. Give us a call or send us an email: info@theablefew.com</div>");
       });
     }
     form.addEventListener("submit", handleSubmit)
