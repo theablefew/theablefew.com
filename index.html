@@ -217,6 +217,7 @@
         </div>
         <div class="col-md-6">
           <form
+            id="contact-form"
             action="https://formspree.io/f/mleqweqd"
             method="POST">
 
@@ -261,6 +262,37 @@
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
 
   <script>
+    var form = document.getElementById("contact-form");
+    
+    async function handleSubmit(event) {
+      event.preventDefault();
+      var data = new FormData(event.target);
+      fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+      }).then(response => {
+        // $('.alert').remove();
+        if (response.ok) {
+          $('.jumbotron .container').prepend("<div class='alert alert-thanks' role='alert'><button type='button' class='close' data-dismiss='alert'><span aria-hidden='true'>&times;</span><span class='sr-only'>Close</span></button>Thank you for contacting The Able Few. Someone will be back with you shortly!</div>");
+          form.reset()
+        } else {
+          response.json().then(data => {
+            if (Object.hasOwn(data, 'errors')) {
+              $('.jumbotron .container').prepend("<div class='alert alert-thanks' role='alert'><button type='button' class='close' data-dismiss='alert'><span aria-hidden='true'>&times;</span><span class='sr-only'>Close</span></button>" +  data["errors"].map(error => error["message"]).join(", ") + "</div>");
+            } else {
+              $('.jumbotron .container').prepend("<div class='alert alert-thanks' role='alert'><button type='button' class='close' data-dismiss='alert'><span aria-hidden='true'>&times;</span><span class='sr-only'>Close</span></button>There was a problem submitting your request. Give us a call or send us an email: info@theablefew.com</div>");
+            }
+          })
+        }
+      }).catch(error => {
+        $('.jumbotron .container').prepend("<div class='alert alert-thanks' role='alert'><button type='button' class='close' data-dismiss='alert'><span aria-hidden='true'>&times;</span><span class='sr-only'>Close</span></button>There was a problem submitting your request. Give us a call or send us an email: info@theablefew.com</div>");
+      });
+    }
+    form.addEventListener("submit", handleSubmit)
+
     function getQueryVariable(variable)
     {
       var query = window.location.search.substring(1);
